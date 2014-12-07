@@ -9,7 +9,10 @@ var patterns = [{
 }];
 
 // options object gets passed to stream transform
-var options = {};
+var options = {
+  paddingSize: 4,
+  chunkSize: 16
+};
 
 var parser = new Avalanche(patterns, options);
 

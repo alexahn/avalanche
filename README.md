@@ -1,5 +1,5 @@
 # Avalanche
-A minimal regex pattern matcher for streams.
+A minimal sliding window regex pattern matcher for streams
 
 # Example
 ```
@@ -36,6 +36,3 @@ parser.on('error', function (error) {
 
 parser.write('hello world');
 ```
-
-# Todo
-* Implement a sliding window with a set buffer size (for guarantees on pattern matching)

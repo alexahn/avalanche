@@ -1,6 +1,6 @@
 {
   "name": "avalanche",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "regex logging library",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/alexahn/avalanche/issues"
   },
-  "homepage": "https://github.com/alexahn/avalanche"
+  "homepage": "https://github.com/alexahn/avalanche",
+  "dependencies": {
+    "soil": "0.0.3"
+  }
 }

@@ -1,7 +1,5 @@
-var stream = require('stream');
+var Soil = require('soil');
 var util = require('util');
-
-var Transform = stream.Transform;
 
 function StreamParser (patterns, options) {
   var self = this;
@@ -10,14 +8,14 @@ function StreamParser (patterns, options) {
   }
   if (!patterns) patterns = [];
   if (!options) options = {};
-  Transform.call(self, options);
+  Soil.call(self, options);
   self.patterns = patterns;
   self.options = options;
 }
 
-util.inherits(StreamParser, Transform);
+util.inherits(StreamParser, Soil);
 
-StreamParser.prototype._transform = function (data, encoding, callback) {
+StreamParser.prototype.transform = function (data, encoding, callback) {
   var self = this;
   self.patterns.forEach(function(pattern, index, array) {
     var dataUTF8 = data.toString('utf8');
