@@ -23,7 +23,7 @@ StreamParser.prototype._transform = function (data, encoding, callback) {
     var dataUTF8 = data.toString('utf8');
     var match = dataUTF8.match(pattern.regexp);
     if (match) {
-      self.emit(pattern.event, match, data);
+      self.emit(pattern.event, match, data, encoding);
     }
   });
   callback(null, data);

@@ -1,4 +1,9 @@
-var Avalanche = require('./index');
+# Avalanche
+A minimal regex pattern matcher for streams.
+
+# Example
+```
+var Avalanche = require('avalanche');
 
 var patterns = [{
   regexp: new RegExp(/hello/),
@@ -30,3 +35,4 @@ parser.on('error', function (error) {
 });
 
 parser.write('hello world');
+```
