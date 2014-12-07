@@ -14,7 +14,12 @@ var patterns = [{
 }];
 
 // options object gets passed to stream transform
-var options = {};
+var options = {
+  // the interval at which to slide the window
+  paddingSize: 4,
+  // the size of the window
+  chunkSize: 16
+};
 
 var parser = new Avalanche(patterns, options);
 
